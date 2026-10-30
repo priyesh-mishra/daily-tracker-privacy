@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Tracker Privacy Policy</title>
+<meta name="description" content="How the Daily Tracker app by Urban Monk handles your data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; }
+  /* Layout: one ruled notebook sheet on a kraft desk, red margin line down the left, pencil headings. */
+  :root {
+    --desk: #c9b291;
+    --sheet: #fbf8f1;
+    --rule: #dbe4ee;
+    --margin: #e3a0a0;
+    --ink: #2e3135;
+    --graphite: #5d6268;
+    --pencil-red: #b5463c;
+    --font-hand: "Gaegu", "Comic Sans MS", "Segoe Print", cursive;
+    --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+    --line: 1.75rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --desk: #1d1a16; --sheet: #2a2723; --rule: #36393f; --margin: #7a3d3a;
+      --ink: #ece6da; --graphite: #b4ada1; --pencil-red: #e48a7f; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --desk: #1d1a16; --sheet: #2a2723; --rule: #36393f; --margin: #7a3d3a;
+    --ink: #ece6da; --graphite: #b4ada1; --pencil-red: #e48a7f; color-scheme: dark;
+  }
+
+  body {
+    background: var(--desk);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding-block: 2rem 3rem;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .sheet {
+    position: relative;
+    max-width: 44rem;
+    margin: 0 auto;
+    background-color: var(--sheet);
+    background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px), var(--rule) var(--line));
+    background-position: 0 3.4rem;
+    padding-block: 2.4rem 2.6rem;
+    padding-inline: 4.2rem 2.4rem;
+    box-shadow: 0 1px 2px rgb(0 0 0 / .12), 0 12px 28px -14px rgb(0 0 0 / .35);
+    border-radius: 2px;
+  }
+  .sheet::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 3rem;
+    border-left: 2px solid var(--margin);
+  }
+  header { display: grid; gap: .25rem; margin-bottom: 1.5rem; }
+  h1 {
+    font-family: var(--font-hand);
+    font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 2.9rem);
+    line-height: 1.05;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .meta { color: var(--graphite); font-size: .9rem; margin: 0; }
+  .intro { font-size: 1.08rem; margin: 0 0 .5rem; line-height: var(--line); }
+  section { display: grid; gap: .35rem; margin-top: 1.4rem; }
+  h2 {
+    font-family: var(--font-hand);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--pencil-red);
+  }
+  p, li { line-height: var(--line); margin: 0; max-width: 65ch; }
+  ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .1rem; }
+  .table-wrap { overflow-x: auto; margin-top: .3rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .45rem .6rem; border-bottom: 1px dashed var(--graphite); line-height: 1.45; }
+  th { font-family: var(--font-hand); font-size: 1.15rem; font-weight: 700; color: var(--graphite); }
+  td:first-child { font-weight: 700; white-space: nowrap; }
+  .email { font-weight: 700; user-select: all; overflow-wrap: anywhere; }
+  footer { margin-top: 2rem; color: var(--graphite); font-size: .9rem; }
+
+  @media (max-width: 560px) {
+    .sheet { padding-inline: 2.4rem 1.2rem; padding-block: 1.8rem 2rem; }
+    .sheet::before { left: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <h1>Daily Tracker Privacy Policy</h1>
+    <p class="meta">Last updated 30 October 2026 · Developer: Urban Monk · App: Daily Tracker (com.urbanmonk.dailytracker)</p>
+  </header>
+
+  <p class="intro">Daily Tracker is a habit and task tracker. We built it so your data stays on your phone. This policy explains what the app reads, what it sends, and why.</p>
+
+  <section>
+    <h2>What stays on your phone</h2>
+    <p>Your tasks, history, goals, scribbles and settings are stored only on your device. We don't run servers that store your data, and the app has no accounts, ads, analytics or crash-reporting tools.</p>
+  </section>
+
+  <section>
+    <h2>Health data</h2>
+    <p>If you connect Health Connect (where Google Fit and Samsung Health store data), Daily Tracker reads the following to fill in your tasks and goals:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Data read</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td>Steps</td><td>Step-goal tasks, such as "10,000 steps"</td></tr>
+          <tr><td>Sleep</td><td>Sleep tasks, such as "Sleep 7 hours"</td></tr>
+          <tr><td>Exercise</td><td>Workout-minute tasks</td></tr>
+          <tr><td>Hydration</td><td>Water-intake tasks</td></tr>
+          <tr><td>Active calories</td><td>Calorie-burn tasks</td></tr>
+          <tr><td>Weight</td><td>Weight goals and their trend chart</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The app can also read this data in the background, so tasks and the home-screen widget stay up to date while the app is closed. Health data is read and used on your device only. It never leaves your device, and it is not shared, sold, or used for advertising. Our use of data from Health Connect follows the Health Connect Permissions policy, including its Limited Use requirements.</p>
+  </section>
+
+  <section>
+    <h2>Phone usage</h2>
+    <p>If you allow usage access, the app reads how long you've used your phone, or an app you choose, today. It uses this to fill in screen-time, app-time and "no phone after" tasks. This data stays on your device.</p>
+  </section>
+
+  <section>
+    <h2>AI features</h2>
+    <p>The assistant and the daily encouraging line use an AI service. When they run, the app sends text over an encrypted (HTTPS) connection to OpenRouter, which passes it to an AI model provider to write a reply.</p>
+    <ul>
+      <li><strong>Assistant:</strong> the sentence you type, today's date, and your task list (task titles, whether each is done, and counts you've logged).</li>
+      <li><strong>Encouraging line:</strong> how many tasks you've done today, your streak, and the titles of unfinished tasks.</li>
+    </ul>
+    <p>Your health numbers and phone-usage numbers are never sent. The app doesn't store this text anywhere off your phone. OpenRouter and the model provider process it to return a response, and their own privacy policies apply to it.</p>
+  </section>
+
+  <section>
+    <h2>Sharing</h2>
+    <p>We don't sell your data or share it with anyone for advertising. The only data that leaves your phone is the AI text described above, sent to the service providers that write the reply.</p>
+  </section>
+
+  <section>
+    <h2>Deleting your data</h2>
+    <p>Everything the app stores is on your phone. Clear the app's storage in Android settings, or uninstall the app, to delete all of it. You can also delete any task inside the app at any time. You can revoke Health Connect or usage access in Android settings whenever you like.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>Daily Tracker is not directed at children under 13.</p>
+  </section>
+
+  <section>
+    <h2>Changes</h2>
+    <p>If this policy changes, we'll update this page and the date at the top.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about this policy: <span class="email">priyesh221292@gmail.com</span></p>
+  </section>
+
+  <footer>© 2026 Urban Monk</footer>
+</main>
+</body>
+</html>
